@@ -1,31 +1,31 @@
 pipeline {
     agent any // This pipeline can run on any available agent
 
-    stages {
+    stages{
         stage('Introduction') { // First stage: Introduction
-            steps {
-                echo 'Starting the pipeline...' // Display a message
-                script {
-                    sleep 5 // Simulate a pause for 5 seconds
+            steps{
+                echo 'Welcome this is introduction step' // Display a message
+                script{
+                    sleep(2) // Simulate a pause for 5 seconds
                 }
             }
         }
-        
         stage('Execution') { // Second stage: Execution
-            steps {
-                echo 'Executing the main tasks...' // Display a message
-                script {
-                    sleep 10 // Simulate a longer pause for 10 seconds
+            steps{
+                echo 'This is execution step' // Display a message
+                script{
+                    sleep(7) // Simulate a longer pause for 10 seconds
                 }
             }
         }
-        
+
         stage('Conclusion') { // Final stage: Conclusion
-            steps {
-                echo 'Pipeline execution completed.' // Display a message
-                script {
-                    sleep 5 // Simulate a pause for 5 seconds
+            steps{
+                echo 'This is conclusion step' // Display a message
+                script{
+                    sleep(4) // Simulate a pause for 5 seconds
                 }
+                echo 'after 4 sec sleep'
             }
         }
     }
